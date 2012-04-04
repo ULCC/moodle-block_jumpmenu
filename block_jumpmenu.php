@@ -62,7 +62,7 @@ class block_jumpmenu extends block_base {
 
 	foreach($sections as $section) {
 		if ($section->visible && $section->section >= 1 && $section->section <= $course->numsections) {
-			$summary = $section->summary;
+			$summary = $section->name;
 			if (empty($summary)) {
 			  $summary = get_string('sectionname',"format_{$course->format}").' '.$section->section;
 			}
